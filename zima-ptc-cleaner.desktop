@@ -1,0 +1,12 @@
+
+[Desktop Entry]
+ServiceTypes=inode/directory
+Icon=
+Actions=ZimaPtcCleaner
+
+Name[en_US]=zima-ptc-cleaner.desktop
+
+[Desktop Action ZimaPtcCleaner]
+Name=ZIMA-PTC-Cleaner
+Icon=
+Exec=zima-ptc-cleaner %F

@@ -1,0 +1,5 @@
+To build, just run:
+qmake -recursive
+make
+
+It's not possible to use make install at the moment, so just run install.sh to install into /usr (or modify that file to change the directory), and uninstall.sh to uninstall from there

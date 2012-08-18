@@ -1,5 +1,30 @@
-To build, just run:
-qmake -recursive
-make
+ZIMA-PTC-Cleaner
+================
 
-It's not possible to use make install at the moment, so just run install.sh to install into /usr (or modify that file to change the directory), and uninstall.sh to uninstall from there
+Requirements
+------------
+Qt 4.x - modules core and gui, qmake
+
+Installation
+------------
+  tar xzf ZIMA-PS2PDF-1.0.0-src.tar.gz
+  cd ZIMA-PS2PDF-1.0.0-src
+  qmake -recursive
+  make
+
+Now you've got executable ZIMA-PTC-Cleaner, you can move it to /usr/local/bin
+or wherever you want.
+
+There're also install.sh and uninstall.sh scripts, they're rather old
+and unsupported, made by formal developer of this program. Check it's
+contents before using it.
+
+Useful information
+------------------
+System context menu works only in Windows. You have to run it once
+as admin so it can create the menu in registry.
+
+If you want to use translations, you have to put the translation file
+next to ZIMA-PTC-Cleaner executable or to subdir 'locale' or to directory
+/usr/local/share/zima-ptc-cleaner, otherwise it won't be found.
+ZIMA-PTC-Cleaner tries to load the language your system is using.

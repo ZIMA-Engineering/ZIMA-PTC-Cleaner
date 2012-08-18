@@ -30,7 +30,7 @@
 #include "aboutdialog.h"
 #include "ui_zima-ptc-cleaner.h"
 
-#define VERSION "1.2.0"
+#define VERSION "1.2.1"
 
 //pri instalacii do nestandardneho adreara toto odkomentovat, aby si to naslo preklady a obrazok
 //#define INSTALL_PREFIX  "/usr"

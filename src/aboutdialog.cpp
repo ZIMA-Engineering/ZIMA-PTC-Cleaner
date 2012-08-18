@@ -38,7 +38,7 @@ AboutDialog::AboutDialog(QWidget *parent) :
 		+ tr(
 			"<h1>ZIMA-PTC-Cleaner</h1>"
 			"<p class=\"version\">%1</p>"
-			"<p>ZIMA-PTC-Cleaner was developed by <a href=\"http://www.zima-construction.cz/\">ZIMA-Construction</a> "
+			"<p>ZIMA-PTC-Cleaner was developed by <a href=\"http://www.zima-engineering.cz/\">ZIMA-Engineering</a> "
 			"and is released under the <a href=\"http://www.gnu.org/\">GNU/GPLv2</a> license."
 			"</p>"
 			"<h4>Authors:</h4>"

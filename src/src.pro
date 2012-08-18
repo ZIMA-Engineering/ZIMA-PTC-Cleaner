@@ -7,7 +7,7 @@ CONFIG += warn_on \
 	  thread \
           qt \
  uitools
-TARGET = ../bin/zima-ptc-cleaner
+TARGET = ../bin/ZIMA-PTC-Cleaner
 
 FORMS += \
 settings.ui \
@@ -22,8 +22,8 @@ HEADERS += \
 
 win32:RC_FILE = zima-ptc-cleaner.rc
 
-TRANSLATIONS += zima-ptc-cleaner_sk.ts \
- zima-ptc-cleaner_cs.ts
+TRANSLATIONS += ZIMA-PTC-Cleaner_sk.ts \
+ ZIMA-PTC-Cleaner_cs.ts
 
 
 zima-ptc-cleaner.path = /usr/bin/
@@ -35,7 +35,8 @@ zima-ptc-cleaner_cs.qm \
 bkg.png
 
 OTHER_FILES += \
-    zima-ptc-cleaner.rc
+    zima-ptc-cleaner.rc \
+    ../README
 
 
 

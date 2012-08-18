@@ -35,10 +35,10 @@ int main( int argc, char ** argv ) {
 	QTranslator translator;
 
 	//pokusi sa nacitat preklady
-	if (!translator.load(QString("zima-ptc-cleaner_") + QLocale::system().name()))
-		if (!translator.load(QString("%1/zima-ptc-cleaner_%2").arg(QApplication::applicationDirPath()).arg(QLocale::system().name())))
-			if (!translator.load(QString("zima-ptc-cleaner_") + QLocale::system().name(), "/usr/share/zima-ptc-cleaner"))
-				if (!translator.load(QString("zima-ptc-cleaner_") + QLocale::system().name(), "/usr/local/share/zima-ptc-cleaner"))
+	if (!translator.load(QString("ZIMA-PTC-Cleaner_") + QLocale::system().name()))
+		if (!translator.load(QString("%1/ZIMA-PTC-Cleaner_%2").arg(QApplication::applicationDirPath()).arg(QLocale::system().name())))
+			if (!translator.load(QString("ZIMA-PTC-Cleaner_") + QLocale::system().name(), "/usr/share/zima-ptc-cleaner"))
+				if (!translator.load(QString("ZIMA-PTC-Cleaner_") + QLocale::system().name(), "/usr/local/share/zima-ptc-cleaner"))
 				{
 #ifdef INSTALL_PREFIX
 					if (!translator.load(QString("zima-ptc-cleaner_") + QLocale::system().name(), INSTALL_PREFIX))

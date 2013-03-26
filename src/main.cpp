@@ -49,17 +49,20 @@ int main( int argc, char ** argv ) {
 	Ptcclean *dlg = new Ptcclean();
 	dlg->show();
 
+	QStringList args = QApplication::arguments();
+
 	//ak neni pri spusteni ziadny parameter, defaultny adresar bude currentPath
-	if (argc < 2)
+	if (args.count() < 2)
 	{
 		QString path = QDir::currentPath();
 		dlg->changeDirectory(path);
 	}else{
 		QString path;
-		for (int i=1; i<argc; i++)
+
+		for (int i=1; i<args.count(); i++)
 		{
-			path += argv[i];
-			if (i != argc-1)
+			path += args[i];
+			if (i != args.count()-1)
 				path += " ";
 		}
 		dlg->changeDirectory(path);

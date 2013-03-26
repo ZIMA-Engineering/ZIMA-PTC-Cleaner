@@ -169,3 +169,13 @@ void SettingsDialog::showContextMenu(const QPoint &pos)
 {
 	contextMenu->popup(listFilter->mapToGlobal(pos));
 }
+
+bool SettingsDialog::exitWhenDone()
+{
+	return settings->value("ExitWhenDone", false).toBool();
+}
+
+void SettingsDialog::setExitWhenDone(bool exit)
+{
+	settings->setValue("ExitWhenDone", exit);
+}

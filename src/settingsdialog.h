@@ -37,6 +37,7 @@ public:
 
     QStringList getFilters();
     bool        hasAnythingChanged() { return anythingChanged; }
+    bool exitWhenDone();
 
     QSettings *settings;
 #ifdef Q_OS_WIN32
@@ -58,6 +59,7 @@ public slots:
     void enableSystemContextMenuChanged(bool checked);
 #endif
     void methodCheckChanged(int);
+    void setExitWhenDone(bool exit);
 
 protected:
     bool anythingChanged;

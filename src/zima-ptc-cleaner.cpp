@@ -26,6 +26,7 @@
 #include <QDir>
 #include <QRegExp>
 #include <QMenu>
+#include <QApplication>
 
 Ptcclean::Ptcclean(QWidget* parent, Qt::WFlags fl)
 	: QMainWindow( parent, fl ), Ui::ptccleanWindow()
@@ -57,6 +58,9 @@ Ptcclean::Ptcclean(QWidget* parent, Qt::WFlags fl)
 	connect( selectNoneAction, SIGNAL(triggered()), this, SLOT(selectNone()));
 	connect( listFiles, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(showContextMenu(const QPoint&)));
 	connect( btnClean, SIGNAL(clicked()), this, SLOT(cleanFiles()));
+	connect(exitCheckBox, SIGNAL(toggled(bool)), &settingsDlg, SLOT(setExitWhenDone(bool)));
+
+	exitCheckBox->setChecked(settingsDlg.exitWhenDone());
 
 	comboDir->setAutoCompletion(false);
 
@@ -214,6 +218,9 @@ void Ptcclean::cleanFiles()
 			i--;
 		}
 	}
+
+	if(exitCheckBox->isChecked())
+		qApp->quit();
 }
 
 void Ptcclean::showContextMenu(const QPoint &pos)

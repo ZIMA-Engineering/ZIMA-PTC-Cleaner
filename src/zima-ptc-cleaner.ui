@@ -185,6 +185,13 @@
     <item>
      <layout class="QHBoxLayout">
       <item>
+       <widget class="QCheckBox" name="exitCheckBox">
+        <property name="text">
+         <string>Exit when done</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <spacer>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>

@@ -27,7 +27,7 @@
 <context>
     <name>Ptcclean</name>
     <message>
-        <location filename="zima-ptc-cleaner.cpp" line="79"/>
+        <location filename="zima-ptc-cleaner.cpp" line="83"/>
         <source>Select directory</source>
         <translation>Vyberte adresář</translation>
     </message>
@@ -44,27 +44,27 @@
         <translation type="obsolete">ptcclean - chyba</translation>
     </message>
     <message>
-        <location filename="zima-ptc-cleaner.cpp" line="89"/>
+        <location filename="zima-ptc-cleaner.cpp" line="93"/>
         <source>The path </source>
         <translation>Cesta </translation>
     </message>
     <message>
-        <location filename="zima-ptc-cleaner.cpp" line="89"/>
+        <location filename="zima-ptc-cleaner.cpp" line="93"/>
         <source> does not exist</source>
         <translation> neexistuje</translation>
     </message>
     <message>
-        <location filename="zima-ptc-cleaner.cpp" line="89"/>
+        <location filename="zima-ptc-cleaner.cpp" line="93"/>
         <source>ZIMA-PTC-Cleaner - error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="zima-ptc-cleaner.cpp" line="107"/>
+        <location filename="zima-ptc-cleaner.cpp" line="111"/>
         <source>ZIMA-PTC-Cleaner - browsing...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="zima-ptc-cleaner.cpp" line="123"/>
+        <location filename="zima-ptc-cleaner.cpp" line="127"/>
         <source>ZIMA-PTC-Cleaner</source>
         <translation type="unfinished"></translation>
     </message>
@@ -109,13 +109,13 @@
     <name>Ui</name>
     <message>
         <location filename="settingsdialog.cpp" line="34"/>
-        <location filename="zima-ptc-cleaner.cpp" line="36"/>
+        <location filename="zima-ptc-cleaner.cpp" line="37"/>
         <source>Select &amp;all</source>
         <translation>Vybrat &amp;vše</translation>
     </message>
     <message>
         <location filename="settingsdialog.cpp" line="35"/>
-        <location filename="zima-ptc-cleaner.cpp" line="37"/>
+        <location filename="zima-ptc-cleaner.cpp" line="38"/>
         <source>Select &amp;none</source>
         <translation>Nevybrat &amp;nic</translation>
     </message>
@@ -162,12 +162,17 @@
         <translation>Nevybrat &amp;nic</translation>
     </message>
     <message>
-        <location filename="zima-ptc-cleaner.ui" line="212"/>
+        <location filename="zima-ptc-cleaner.ui" line="190"/>
+        <source>Exit when done</source>
+        <translation>Ukončit po vyčištění</translation>
+    </message>
+    <message>
+        <location filename="zima-ptc-cleaner.ui" line="219"/>
         <source>&amp;Clean</source>
         <translation>Vyčisti&amp;t</translation>
     </message>
     <message>
-        <location filename="zima-ptc-cleaner.ui" line="235"/>
+        <location filename="zima-ptc-cleaner.ui" line="242"/>
         <source>Ab&amp;out...</source>
         <translation type="unfinished">&amp;O programu...</translation>
     </message>

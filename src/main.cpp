@@ -31,17 +31,24 @@ int main( int argc, char ** argv ) {
 
 	QTranslator translator;
 
-	//pokusi sa nacitat preklady
-	if (!translator.load(QString("ZIMA-PTC-Cleaner_") + QLocale::system().name()))
-		if (!translator.load(QString("%1/ZIMA-PTC-Cleaner_%2").arg(QApplication::applicationDirPath()).arg(QLocale::system().name())))
-			if (!translator.load(QString("ZIMA-PTC-Cleaner_") + QLocale::system().name(), "/usr/share/zima-ptc-cleaner"))
-				if (!translator.load(QString("ZIMA-PTC-Cleaner_") + QLocale::system().name(), "/usr/local/share/zima-ptc-cleaner"))
-				{
-#ifdef INSTALL_PREFIX
-					if (!translator.load(QString("zima-ptc-cleaner_") + QLocale::system().name(), INSTALL_PREFIX))
-#endif
-				}
-	app.installTranslator(&translator);
+	QString filename = "ZIMA-PTC-Cleaner_" + QLocale::system().name();
+	QStringList paths;
+
+	paths
+			<< filename
+			<< QApplication::applicationDirPath() + "/" + filename
+			<< QApplication::applicationDirPath() + "/locale/" + filename
+			<< ("locale/" + filename)
+			<< (":/" + filename);
+
+	foreach(QString path, paths)
+        {
+		if( translator.load(path) )
+		{
+			app.installTranslator(&translator);
+			break;
+		}
+	}
 
 	Ptcclean *dlg = new Ptcclean();
 	dlg->show();

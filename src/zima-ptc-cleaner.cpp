@@ -28,8 +28,8 @@
 #include <QMenu>
 #include <QApplication>
 
-Ptcclean::Ptcclean(QWidget* parent, Qt::WFlags fl)
-	: QMainWindow( parent, fl ), Ui::ptccleanWindow()
+Ptcclean::Ptcclean(QWidget* parent)
+	: QMainWindow( parent ), Ui::ptccleanWindow()
 {
 	setupUi(this);
 
@@ -62,9 +62,7 @@ Ptcclean::Ptcclean(QWidget* parent, Qt::WFlags fl)
 
 	exitCheckBox->setChecked(settingsDlg.exitWhenDone());
 
-	comboDir->setAutoCompletion(false);
-
-	listFiles->setStyleSheet("background-image: url(':/bkg.png');"
+	listFiles->setStyleSheet("background-image: url(':/gfx/bkg.png');"
 				 "background-position: center center;\n"
 				 "background-repeat: no-repeat;\n"
 				 "background-attachment: fixed;\n"

@@ -25,8 +25,8 @@
 #include <QMenu>
 #include <QApplication>
 
-SettingsDialog::SettingsDialog(QWidget* parent, Qt::WFlags fl)
-	: QDialog( parent, fl ), Ui::settingsDialog()
+SettingsDialog::SettingsDialog(QWidget* parent)
+	: QDialog( parent ), Ui::settingsDialog()
 {
 	setupUi(this);
 

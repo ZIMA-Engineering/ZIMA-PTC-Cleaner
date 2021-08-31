@@ -14,8 +14,8 @@
    <string>ZIMA-PTC-Cleaner Settings</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="icons.qrc">
-    <normaloff>:/icon.png</normaloff>:/icon.png</iconset>
+   <iconset resource="../zima-ptc-cleaner.qrc">
+   <normaloff>:/gfx/icon.png</normaloff>:/gfx/icon.png</iconset>
   </property>
   <property name="sizeGripEnabled">
    <bool>false</bool>
@@ -126,7 +126,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="icons.qrc"/>
+ <include location="../zima-ptc-cleaner.qrc"/>
  </resources>
  <connections/>
 </ui>

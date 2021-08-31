@@ -32,7 +32,7 @@ class SettingsDialog : public QDialog, private Ui::settingsDialog
   Q_OBJECT
 
 public:
-    SettingsDialog(QWidget* parent = 0, Qt::WFlags fl = 0 );
+    SettingsDialog(QWidget* parent = 0);
     ~SettingsDialog();
 
     QStringList getFilters();

@@ -82,7 +82,7 @@ class Ptcclean : public QMainWindow, private Ui::ptccleanWindow
     Q_OBJECT
 
 public:
-    Ptcclean(QWidget* parent = 0, Qt::WFlags fl = 0 );
+    Ptcclean(QWidget* parent = 0 );
     ~Ptcclean();
 
     void changeDirectory(const QString &newDir);

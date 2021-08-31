@@ -14,8 +14,8 @@
    <string>ZIMA-PTC-Cleaner</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="icons.qrc">
-    <normaloff>:/icon.png</normaloff>:/icon.png</iconset>
+   <iconset resource="../zima-ptc-cleaner.qrc">
+   <normaloff>:/gfx/icon.png</normaloff>:/gfx/icon.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout">
@@ -49,7 +49,7 @@
          <string>&amp;Browse</string>
         </property>
         <property name="icon">
-         <iconset resource="icons.qrc">
+         <iconset resource="../zima-ptc-cleaner.qrc">
           <normaloff>:/dir.xpm</normaloff>:/dir.xpm</iconset>
         </property>
        </widget>
@@ -126,8 +126,8 @@
          <string>&amp;Settings</string>
         </property>
         <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/kcontrol.png</normaloff>:/kcontrol.png</iconset>
+         <iconset resource="../zima-ptc-cleaner.qrc">
+	 <normaloff>:/gfx/kcontrol.png</normaloff>:/gfx/kcontrol.png</iconset>
         </property>
        </widget>
       </item>
@@ -249,7 +249,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="icons.qrc"/>
+  <include location="../zima-ptc-cleaner.qrc"/>
  </resources>
  <connections/>
 </ui>

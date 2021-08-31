@@ -29,9 +29,6 @@
 int main( int argc, char ** argv ) {
 	QApplication app( argc, argv );
 
-	QTextCodec::setCodecForTr(QTextCodec::codecForName("utf8"));
-	QTextCodec::setCodecForCStrings(QTextCodec::codecForName("utf8"));
-
 	QTranslator translator;
 
 	//pokusi sa nacitat preklady

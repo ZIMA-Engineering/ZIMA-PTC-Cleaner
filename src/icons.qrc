@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>dir.xpm</file>
-        <file>kcontrol.png</file>
-        <file>icon.png</file>
-        <file>bkg.png</file>
-    </qresource>
-</RCC>

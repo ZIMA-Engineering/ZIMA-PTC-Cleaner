@@ -23,7 +23,7 @@
 #include <QApplication>
 #include <QTranslator>
 #include <QLocale>
-#include <QTextCodec>
+#include <QDir>
 #include "zima-ptc-cleaner.h"
 
 int main( int argc, char ** argv ) {
@@ -41,9 +41,9 @@ int main( int argc, char ** argv ) {
 			<< ("locale/" + filename)
 			<< (":/" + filename);
 
-	foreach(QString path, paths)
-        {
-		if( translator.load(path) )
+	for (const QString &path : paths)
+	{
+		if (translator.load(path))
 		{
 			app.installTranslator(&translator);
 			break;

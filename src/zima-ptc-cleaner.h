@@ -22,10 +22,13 @@
 #ifndef PTCCLEAN_H
 #define PTCCLEAN_H
 
-#include <QMainWindow>
-#include <QThread>
-#include <QMutex>
+#include <QAction>
 #include <QDir>
+#include <QMainWindow>
+#include <QMenu>
+#include <QMutex>
+#include <QMutexLocker>
+#include <QThread>
 #include "settingsdialog.h"
 #include "aboutdialog.h"
 #include "ui_zima-ptc-cleaner.h"
@@ -111,4 +114,3 @@ protected:
 };
 
 #endif
-

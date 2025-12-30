@@ -2,6 +2,7 @@ QT += core gui widgets
 
 TARGET = ZIMA-PTC-Cleaner
 TEMPLATE = app
+CONFIG += c++17
 
 win32:INCLUDEPATH += ../
 VPATH += ./src

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2008 by Peter Holák                                     *
+ *   Copyright (C) 2008 by Peter Holak                                     *
  *   forrondur@gmail.com                                                   *
  *                                                                         *
  *   (c) 2011 Jakub Skokan <aither@havefun.cz>                             *
@@ -22,7 +22,10 @@
 #ifndef SETTINGSDIALOG_H
 #define SETTINGSDIALOG_H
 
+#include <QAction>
 #include <QDialog>
+#include <QListWidgetItem>
+#include <QMenu>
 #include <QSettings>
 #include <QStringList>
 #include "ui_settings.h"

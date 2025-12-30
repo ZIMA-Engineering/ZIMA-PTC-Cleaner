@@ -21,12 +21,15 @@
 
 
 #include "zima-ptc-cleaner.h"
-#include <QFileDialog>
-#include <QMessageBox>
-#include <QDir>
-#include <QRegExp>
-#include <QMenu>
 #include <QApplication>
+#include <QDir>
+#include <QFile>
+#include <QFileDialog>
+#include <QListWidgetItem>
+#include <QMenu>
+#include <QMessageBox>
+#include <QPalette>
+#include <QRegularExpression>
 
 Ptcclean::Ptcclean(QWidget* parent)
 	: QMainWindow( parent ), Ui::ptccleanWindow()
@@ -276,15 +279,13 @@ void DirBrowsingThread::abortBrowsing()
 void DirBrowsingThread::addDir(QDir dir)
 {
 	//zoznam vsetkych suborov
-	QStringList sl = dir.entryList(QDir::Files, QDir::Name);
+	const QStringList sl = dir.entryList(QDir::Files, QDir::Name);
 	finalList << sl;
 
 	//vsetkym sa priradi sucasny adresar
-	QString s;
-	foreach(s,sl)
+	for (int i = 0; i < sl.count(); ++i)
 	{
-		s = dir.path() + "/";
-		dirList << s;
+		dirList << dir.path() + "/";
 	}
 
 	//kontrola ci sa thread nema zrusit
@@ -301,8 +302,7 @@ void DirBrowsingThread::addDir(QDir dir)
 	if (includeSubdirs)
 	{
 		QStringList sld = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-		QString entry;
-		foreach (entry, sld)
+		for (const QString &entry : sld)
 		{
 			QDir newDir(dir.path() + "/" + entry);
 			addDir(newDir);
@@ -342,14 +342,13 @@ void DirBrowsingThread::run()
 	QStringList::iterator   bigItemDir;
 	QString                 lastExt;
 	QString                 lastDir;
-	QList<QRegExp>          regExps;
+	QList<QRegularExpression> regExps;
 
 	if (delFilters)
 	{
-		foreach(QString s, filters)
+		for (const QString &s : filters)
 		{
-			QRegExp r(s, Qt::CaseSensitive, QRegExp::Wildcard);
-			regExps << r;
+			regExps << QRegularExpression::fromWildcard(s, Qt::CaseSensitive);
 		}
 	}
 
@@ -368,9 +367,9 @@ void DirBrowsingThread::run()
 		//metoda mazania podla filtrov (wildcards)
 		if (delFilters)
 		{
-			foreach (QRegExp r, regExps)
+			for (const QRegularExpression &r : regExps)
 			{
-				if (r.exactMatch(*strI))
+				if (r.match(*strI).hasMatch())
 				{
 					forceKeepInList = true;
 					break;

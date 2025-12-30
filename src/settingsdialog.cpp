@@ -39,9 +39,8 @@ SettingsDialog::SettingsDialog(QWidget* parent)
 	settings = new QSettings("ZIMA-Construction", "ZIMA-PTC-Cleaner", this);
 	settings->beginGroup("filters");
 
-	QStringList filters = settings->childKeys();
-	QString str;
-	foreach (str, filters)
+	const QStringList filters = settings->childKeys();
+	for (const QString &str : filters)
 	{
 		QListWidgetItem *item = new QListWidgetItem(str, listFilter);
 		bool check = settings->value(str, false).toBool();

@@ -22,7 +22,7 @@ HEADERS += settingsdialog.h \
     zima-ptc-cleaner.h \
     aboutdialog.h
 
-win32:RC_FILE = zima-ptc-cleaner.rc
+win32:RC_FILE = src/zima-ptc-cleaner.rc
 
 OTHER_FILES += \
     src/zima-ptc-cleaner.rc \

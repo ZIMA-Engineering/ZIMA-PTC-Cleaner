@@ -25,7 +25,7 @@
 
 ## Testing Guidelines
 - No automated test suite is present. Perform manual validation: start the app, exercise directory selection, cleaning actions, and preference dialogs on the target platform.
-- Before submitting changes, re-run the build to ensure UI forms and resources still compile and translations load for at least one locale.
+- Always verify changes with a full build (`qmake -recursive zima-ptc-cleaner.pro` + `make -j$(nproc)`) before considering the work done, ensuring UI forms and resources still compile and translations load for at least one locale.
 
 ## Commit & Pull Request Guidelines
 - Commits: Use concise, imperative subjects (e.g., “Add dir change validation”). Group related UI and logic updates together; avoid mixing refactors with behavior changes when possible.

@@ -1,0 +1,11 @@
+.qmake.stash
+Makefile
+nix-build
+zima-ptc-cleaner.pro.user*
+ZIMA-PTC-Cleaner
+locale/*.qm
+*.o
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
